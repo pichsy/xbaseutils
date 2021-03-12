@@ -7,9 +7,13 @@ import java.io.File;
 
 public class AppPathUtils {
 
-    private static final String BASE_DIR =
+    private static String BASE_DIR =
             Environment.getExternalStorageDirectory().getAbsolutePath()
-                    + File.separator + "AppXData" + File.separator;
+                    + File.separator + "Cache" + File.separator;
+
+    public static void init(String baseDir) {
+        BASE_DIR = baseDir;
+    }
 
     public static File getDCIMPath(Context context) {
         File file = new File(BASE_DIR + "DCIM");

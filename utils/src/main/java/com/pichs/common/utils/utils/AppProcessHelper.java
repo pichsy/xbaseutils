@@ -8,11 +8,11 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class ForeBackgroundHelper implements Application.ActivityLifecycleCallbacks {
+public final class AppProcessHelper implements Application.ActivityLifecycleCallbacks {
 
     private static final String TAG = "ForeBackgroundHelper";
 
-    private static ForeBackgroundHelper singleton;
+    private static AppProcessHelper singleton;
 
     public static void init(Application application) {
         init(application, null);
@@ -20,7 +20,7 @@ public final class ForeBackgroundHelper implements Application.ActivityLifecycle
 
     public static void init(Application application, Filter filter) {
         if (singleton == null) {
-            singleton = new ForeBackgroundHelper(filter);
+            singleton = new AppProcessHelper(filter);
             application.registerActivityLifecycleCallbacks(singleton);
         } else {
             Log.w(TAG, TAG + " has been initialized.");
@@ -62,7 +62,7 @@ public final class ForeBackgroundHelper implements Application.ActivityLifecycle
     private int foregroundCount = 0;
     private int bufferCount = 0;
 
-    private ForeBackgroundHelper(Filter filter) {
+    private AppProcessHelper(Filter filter) {
         this.filter = filter;
     }
 
