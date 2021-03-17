@@ -1,0 +1,8 @@
+// kotlin 引入
+project.apply plugin: 'kotlin-android'
+project.apply plugin: 'kotlin-kapt'
+// 即将废弃，建议使用viewbinding
+//project.apply plugin: 'kotlin-android-extensions'
+//project.apply plugin: 'kotlin-parcelize'
+project.dependencies.add('api', "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version")
+project.dependencies.add('api', "androidx.core:core-ktx:1.1.0")
