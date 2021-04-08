@@ -1,3 +1,6 @@
+# 最新地址, 该项目已移到gitee
+# [https://gitee.com/pichs/xbaseutils](https://gitee.com/pichs/xbaseutils)
+
 # XBaseUtils
 
 全是有用的工具类，没有多余的，轻量级，贴合项目需求
